@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+}
+
+#container {
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.grid {
+	float: left;
+	background-color: #000000;
+	width: 10%;
+	height: 10%;
+	margin: -1px;
+	border: 1px solid;
+}
