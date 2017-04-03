@@ -1,12 +1,37 @@
 $(document).ready(function () {
 	var gridSize = 16;
-	for (var i = 1; i <= 100; i += 1) {
-		$('#container').append('<div class="grid"></div>');
+	var blockSize = 500 / gridSize;
+	var blockQuantity = gridSize * gridSize;
+	for (var i = 1; i <= blockQuantity; i += 1) {
+		$('#container').append('<div class="block"></div>');
 	};
-	$('.grid').mouseenter(function() {
-		$(this).fadeTo('fast', 0.1);
+	$('.block').css({
+		"height": blockSize + "px",
+		"width": blockSize + "px",
 	});
-	$('.grid').mouseleave(function() {
-		$(this).fadeTo('fast', 1.0);
+
+	$('.block').mouseenter(function() {
+			$(this).css({
+				"background-color": "#000",
+			});
+		});
+
+	$('button').click(function() {
+		$('#container').empty();
+		var newGridSize = prompt("Enter the number of squares per side for the grid (e.g. 16 for 16x16)");
+		var newBlockSize = 500 / newGridSize;
+		var newBlockQuantity = newGridSize * newGridSize;
+		for (var i = 1; i <= newBlockQuantity; i += 1) {
+			$('#container').append('<div class="block"></div>');
+		};
+		$('.block').css({
+			"height": newBlockSize + "px",
+			"width": newBlockSize + "px",
+		});
+		$('.block').mouseenter(function() {
+			$(this).css({
+				"background-color": "#000",
+			});
+		});
 	});
 });

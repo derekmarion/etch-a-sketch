@@ -2,18 +2,24 @@
 	margin: 0;
 }
 
-#container {
-	width: 600px;
-	height: 600px;
+button#reset {
+	width: 100px;
+	height: 20px;
+	margin: auto;
+        display: block;
+	margin-top: 10px;	
+}
+
+div#container {
+	width: 500px;
+	height: 500px;
 	margin: auto;
 	margin-top: 20px;
 }
 
-.grid {
+.block {
 	float: left;
-	background-color: #000000;
-	width: 10%;
-	height: 10%;
+	background-color: #FFF;
 	margin: -1px;
 	border: 1px solid;
 }
